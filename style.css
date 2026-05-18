@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding não quebre o layout */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 5%;
+    position: sticky; /* Menu fixo no topo ao rolar */
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Empurra logo p/ esquerda e ul p/ direita */
+    align-items: center;
+}
+
+nav ul {
+    display: flex; /* Transforma a lista vertical em horizontal */
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+#hero {
+    height: 60vh; /* Ocupa 60% da altura da tela */
+    display: flex;
+    flex-direction: column; /* Alinha os textos um embaixo do outro */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center;     /* Centraliza horizontalmente */
+    text-align: center;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    padding: 20px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+section {
+    padding: 60px 10%; /* Espaçamento interno lateral para não colar nas bordas */
+}
+
+#skills ul {
+    display: flex;
+    flex-wrap: wrap; /* Se não couber na linha, pula para a de baixo */
+    gap: 15px;       /* Espaço entre as habilidades */
+    list-style: none;
+    padding: 0;
+}
+
+#skills li {
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #2c3e50;
+    color: white;
+    margin-top: 40px;
+}
+.habilidades {
+    transform: scale(1.1); /* Aumenta o tamanho da seção de habilidades */
+    background-color:#2980b9; /*mudar o tom de azul*/
+    transition: 0.3s ease; /* movimento suave  */
+}
+html {
+    scroll-behavior: smooth; /* Rola suavemente ao clicar nos links de navegação */
+}
+@keyframes surgir {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+main {
+    animation: surgir 1s ease-out; /* Aplica a animação de surgimento */
+}
+/* Organiza os cards em linha/grade */
+.container-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* Estilo de cada card */
+.card-projeto {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* Largura fixa para os cards */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* Suaviza a animação */
+}
+
+/* Efeito de interatividade (Hover) */
+.card-projeto:hover {
+    transform: translateY(-10px); /* O card "sobe" levemente */
+    border-color: #0044ff; /* Cor que você está usando no cabeçalho */
+}
+
+/* Estilo do botão dentro do card */
+.btn-projeto {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #0044ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
